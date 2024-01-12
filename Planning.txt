@@ -16,3 +16,5 @@ Acceptance Criteria -
 User Story 5 - List all games by Rating
     A test in which rating input is not one of the Rating properties in the Enum which should result in an error
     A test in which the count of games in the list is greater than 0
+
+https://trello.com/b/4VgGijoG/agileprojectgamefinder - Trello Board
