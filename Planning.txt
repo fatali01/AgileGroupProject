@@ -1,0 +1,18 @@
+User Story 1 - I want to be able to find a game by its name
+Acceptance Criteria -
+    A test in which a search result with a valid name and any information about that game.
+    A test in which we put in a name over 50 characters that would result in an error
+User Story 2 - List all games by Game Console
+Acceptance Criteria -
+    A test in which A game console input is outside the list of game consoles and returns an error
+    Game Console list length is greater than 0 (there are games listed under the Game Console search)
+User Story 3 - List all games by Genre
+Acceptance Criteria -
+    a test in which a game console input is outside the list of game consoles and returns an error
+    Genre test returns a bool to determine if valid game exists in method response
+User Story 4 - Check whether or not a game is family friendly or not
+Acceptance Criteria -
+    a test in which a game with maturity rating of M returns false to family friendly
+User Story 5 - List all games by Rating
+    A test in which rating input is not one of the Rating properties in the Enum which should result in an error
+    A test in which the count of games in the list is greater than 0
