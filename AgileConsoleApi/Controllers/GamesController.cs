@@ -11,16 +11,15 @@ namespace AgileConsoleApi.Controllers
     [Route("api/[controller]")]
     public class GamesController : ControllerBase
     {
-        private readonly IGamesRepo _games;
-        [HttpGet]
+        private readonly IGamesRepo games;
         public async Task<IActionResult> GetGameByNameAsync(string name)
         {
-            var gameDetails = await _games.GetGameByNameAsync(name);
-            if (gameDetails is null)
+            var result = await games.GetGameByNameAsync(name);
+            if (result is null)
             {
-                return BadRequest();
+                return NotFound();
             }
-            return Ok(gameDetails);
+            return Ok(result);
         }
     }
 }
