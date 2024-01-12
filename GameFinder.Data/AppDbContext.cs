@@ -12,7 +12,7 @@ namespace GameFinder.Data
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options) {}
 
-        DbSet<GamesEntity> Games {get;}
+        public DbSet<GamesEntity> Games {get;}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
