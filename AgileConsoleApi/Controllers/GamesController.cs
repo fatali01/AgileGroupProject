@@ -12,27 +12,30 @@ namespace AgileConsoleApi.Controllers
     [Route("api/[controller]")]
     public class GamesController : ControllerBase
     {
-        private readonly IGamesRepo _gamesRepo;
-        public GamesController(IGamesRepo gamesRepo)
-        {
-            _gamesRepo = gamesRepo;
-        }
-        [HttpGet]
-        public async Task<IGamesRepo> GetGamesById([FromRoute] int gameId)
-        {
-            gameDetail? details = await _gamesRepo.GetNoteByIdAsync(gameId);
 
 
-            return details is not null
-                ? Ok(details)
-                : NotFound();
-        }
-        [HttpGet]
-        [ProducesResponseType(typeof(IGamesRepo<GetGames>), 200)]
-        public async Task<IGamesRepo> GetAllGames()
-        {
-            var games = await _gamesRepo.GetAllGamesAsync();
-            return Ok(games);
-        }
+
+        // private readonly IGamesRepo _gamesRepo;
+        // public GamesController(IGamesRepo gamesRepo)
+        // {
+        //     _gamesRepo = gamesRepo;
+        // }
+        // [HttpGet]
+        // public async Task<IGamesRepo> GetGamesById([FromRoute] int gameId)
+        // {
+        //     gameDetail? details = await _gamesRepo.GetNoteByIdAsync(gameId);
+
+
+        //     return details is not null
+                // ? Ok(details)
+        //         : NotFound();
+        // }
+        // [HttpGet]
+        // [ProducesResponseType(typeof(IGamesRepo<GetGames>), 200)]
+        // public async Task<IGamesRepo> GetAllGames()
+        // {
+        //     var games = await _gamesRepo.GetAllGamesAsync();
+        //     return Ok(games);
+        // }
     }
 }

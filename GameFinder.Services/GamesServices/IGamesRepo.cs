@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GameFinder.Services.GamesServices
 {
-    public class IGamesRepo
+    public interface IGamesRepo
     {
         
     }
